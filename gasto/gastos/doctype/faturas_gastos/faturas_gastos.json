@@ -8,7 +8,19 @@
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series"
+  "naming_series",
+  "proveedor",
+  "name_supplier",
+  "column_break_gynow",
+  "fecha",
+  "company",
+  "section_break_u5npo",
+  "metodo_de_pago",
+  "column_break_wb8ee",
+  "cuenta_de_pago",
+  "ingreso_de_gastos_section",
+  "gastos",
+  "total"
  ],
  "fields": [
   {
@@ -16,11 +28,74 @@
    "fieldtype": "Select",
    "label": "Series",
    "options": "FAC-GAS-"
+  },
+  {
+   "fieldname": "proveedor",
+   "fieldtype": "Link",
+   "label": "Proveedor",
+   "options": "Supplier"
+  },
+  {
+   "fetch_from": "proveedor.name_supplier",
+   "fieldname": "name_supplier",
+   "fieldtype": "Data",
+   "label": "Nombre Provedor"
+  },
+  {
+   "fieldname": "column_break_gynow",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "fecha",
+   "fieldtype": "Date",
+   "label": "Fecha",
+   "options": "Today"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "section_break_u5npo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "metodo_de_pago",
+   "fieldtype": "Select",
+   "label": "Metodo de Pago",
+   "options": "Seleccionar...\nEFECTIVO\nTARJETA\nCHEQUE"
+  },
+  {
+   "fieldname": "column_break_wb8ee",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cuenta_de_pago",
+   "fieldtype": "Link",
+   "label": "Cuenta de Pago",
+   "options": "Account"
+  },
+  {
+   "fieldname": "ingreso_de_gastos_section",
+   "fieldtype": "Section Break",
+   "label": "INGRESO DE GASTOS"
+  },
+  {
+   "fieldname": "gastos",
+   "fieldtype": "Table",
+   "options": "detalle_gastos"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-22 16:07:30.852401",
+ "modified": "2023-05-22 16:20:22.915484",
  "modified_by": "Administrator",
  "module": "Gastos",
  "name": "faturas_gastos",
