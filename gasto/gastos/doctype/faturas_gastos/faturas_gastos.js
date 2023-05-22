@@ -1,6 +1,3 @@
-// Copyright (c) 2022, orlando and contributors
-// For license information, please see license.txt
-
 frappe.ui.form.on('faturas_gastos', {
 	refresh: function (frm) {
 		//console.log("facturagastos")
@@ -14,14 +11,6 @@ frappe.ui.form.on('faturas_gastos', {
 				]
 			}
 		}
-
-
-	},
-
-
-	onload: function (frm) {
-
-		frm.doc.hora = frappe.datetime.now_time();
 
 
 	},
@@ -47,20 +36,7 @@ frappe.ui.form.on('faturas_gastos', {
 	},
 	valor: function (frm) {
 		console.log("valor")
-		//frm.events.set_total_allocated_amount(frm);
 	},
-
-	/* cuenta_de_pago: function(frm) {
-		
-
-		frm.events.set_account_currency_and_balance(frm, frm.doc.paid_from,
-			"paid_from_account_currency", "paid_from_account_balance", function(frm) {
-				
-					frm.events.paid_amount(frm);
-				
-			}
-		);
-	}, */
 	set_total_allocated_amount: function (frm) {
 		var total = 0.0;
 
@@ -71,9 +47,6 @@ frappe.ui.form.on('faturas_gastos', {
 			}
 		});
 		frm.set_value("total", Math.abs(total));
-
-
-		//frm.events.set_unallocated_amount(frm);
 	},
 });
 
@@ -86,8 +59,5 @@ frappe.ui.form.on('detalle_gastos', {
 	gastos_remove: function (frm) {
 		frm.events.set_total_allocated_amount(frm);
 	},
-
-
-
 });
 
