@@ -2,14 +2,13 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2023-05-22 16:01:18.508717",
+ "creation": "2023-05-22 16:04:32.120261",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "cuenta_de_pago"
+  "naming_series"
  ],
  "fields": [
   {
@@ -17,20 +16,15 @@
    "fieldtype": "Select",
    "label": "Series",
    "options": "FAC-GAS-"
-  },
-  {
-   "fieldname": "cuenta_de_pago",
-   "fieldtype": "Link",
-   "label": "Cuenta de Pago",
-   "options": "Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-05-22 16:01:18.508717",
+ "modified": "2023-05-22 16:07:30.852401",
  "modified_by": "Administrator",
  "module": "Gastos",
  "name": "faturas_gastos",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
