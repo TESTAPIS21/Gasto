@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include gasto *.css
+recursive-include gasto *.csv
+recursive-include gasto *.html
+recursive-include gasto *.ico
+recursive-include gasto *.js
+recursive-include gasto *.json
+recursive-include gasto *.md
+recursive-include gasto *.png
+recursive-include gasto *.py
+recursive-include gasto *.svg
+recursive-include gasto *.txt
+recursive-exclude gasto *.pyc
