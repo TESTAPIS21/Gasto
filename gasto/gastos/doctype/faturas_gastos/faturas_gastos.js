@@ -1,7 +1,6 @@
 frappe.ui.form.on('faturas_gastos', {
 	refresh: function (frm) {
-		frm.fields_dict['gastos'].grid.get_field('cuenta').get_query = function (cdt, cdn) {
-			var child = locals[cdt][cdn];
+		frm.fields_dict['gastos'].grid.get_field('cuenta').get_query = function () {
 			return {
 				"filters": [
 					["Account", "account_type", 'in', ["Chargeable", "Income Account", "Expenses Included In Valuation", "Expenses Included In Asset Valuation"]]
@@ -24,15 +23,15 @@ frappe.ui.form.on('faturas_gastos', {
 			}
 		});
 	},
-	validate_company: (frm) => {
+	/* validate_company: (frm) => {
 		if (!frm.doc.company) {
 			frappe.throw({ message: __("Por favor, seleccione primero una empresa."), title: __("Mandatory") });
 		}
-	},
+	}, */
 
 	set_total_allocated_amount: function (frm) {
 		var total = 0.0;
-		$.each(frm.doc.gastos || [], function (i, row) {
+		$.each(frm.doc.gastos || [], function (_i, row) {
 			if (row.valor) {
 				total += flt(row.valor);
 
