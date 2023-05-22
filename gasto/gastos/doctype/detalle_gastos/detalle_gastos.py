@@ -1,4 +1,4 @@
-# Copyright (c) 2023, Sistemas and contributors
+# Copyright (c) 2022, orlando and contributors
 # For license information, please see license.txt
 
 # import frappe
